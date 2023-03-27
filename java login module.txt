@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner scanner = new Scanner (System.in);
+    String username = "";
+    String password = "";
+    String repassword = "";
+
+      System.out.print ("Enter username: ");
+      username = scanner.nextLine ();
+
+      System.out.print ("Enter password: ");
+      password = scanner.nextLine ();
+
+
+    if (isValidUser (username, password))
+      {
+	System.out.println ("Login successful!");
+      }
+    else
+      {
+	System.out.println ("Invalid username or password.");
+      }
+
+}
+                public static boolean isValidUser (String username, String password)
+                {
+                    ArrayList < String > names = new ArrayList < String > ();
+    names.add ("User1");
+    names.add ("User2");
+    names.add ("User3");
+    names.add ("User4");
+
+    ArrayList < String > pswrd = new ArrayList < String > ();
+    pswrd.add ("User1");
+    pswrd.add ("User2");
+    pswrd.add ("User3");
+    pswrd.add ("User4");
+
+    boolean t = false;
+
+                      for (int i = 0; i < names.size (); i++)
+                	{
+                    	  if (username.equals (names.get (i))
+                    	      && password.equals (pswrd.get (i)))
+                    	    {
+                    	      t = true;
+                    	      break;
+                    	    }
+                	}
+                      return t;
+                }
+  
+}
